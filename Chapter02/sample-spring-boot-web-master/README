@@ -1,0 +1,5 @@
+## config文件路径
+* A /config subdirectory of the current application directory
+* The current application directory
+* A classpath /config package (for example, inside your JAR)
+* The classpath root

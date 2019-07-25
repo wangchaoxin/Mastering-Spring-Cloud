@@ -16,7 +16,8 @@ logging:
 management:
   security:
     enabled: false
-    
+# 配置不同环境，运行时指定spring.profiles.active时生效
+# java -jar -Dspring.profiles.active=production sample-spring-boot-web-1.0-SNAPSHOT.jar
 ---
 
 spring:

@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.actuate.metrics.CounterService;
 import org.springframework.stereotype.Service;
 
+/**
+ * 自定义监控指标，可以监控controller中的接口调用的次数
+ */
 @Service
 public class PersonCounterService {
 

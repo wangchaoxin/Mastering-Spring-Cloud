@@ -1,1 +1,17 @@
 /.project
+# Eclipse #
+######################
+.settings/
+.project
+.classpath
+eclipse/
+
+# IDEA  #
+#########
+.idea/
+out/
+*.iml
+*.ipr
+*.iws
+
+target/

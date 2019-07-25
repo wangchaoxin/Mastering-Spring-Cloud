@@ -1,18 +1,30 @@
-server:  
+server:
   port: ${port:2222}
 
-spring:  
+spring:
   application:
     name: first-service
-    
+#  devtools默认监控classpath下所有文件，有改动的话就会重启
+#  如果想排除某些文件夹，如下配置
+  devtools:
+    restart:
+      exclude: static/**
+
 logging:
   pattern:
     console: "%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n"
     file: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
-#  level:
-#    org.springframework.web: DEBUG
+  #  level:
+  #    org.springframework.web: DEBUG
   file: app.log
-  
+# 设置acutator监控端点不需要安全控制，可以直接访问
 management:
   security:
     enabled: false
+
+# 自定义属性名称
+name: first-service
+my:
+  servers:
+    - dev.bar.com
+    - foo.bar.com
